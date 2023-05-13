@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yarp.DynamicRouting.Core", "src\Yarp.DynamicRouting.Core\Yarp.DynamicRouting.Core.csproj", "{EC652515-F461-4CB8-8397-7974910BC219}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04651F3D-616A-4591-B282-944A3250F5A2}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarp.DynamicRouting.Infrastructure", "src\Yarp.DynamicRouting.Infrastructure\Yarp.DynamicRouting.Infrastructure.csproj", "{4C502FA5-E556-4ABA-989E-D391AFD85ABA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarp.DynamicRouting.LoadBalancer", "src\Yarp.DynamicRouting.LoadBalancer\Yarp.DynamicRouting.LoadBalancer.csproj", "{02179FE7-B17D-499D-8CCC-0A8530530D35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarp.DynamicRouting.Dashboard", "src\Yarp.DynamicRouting.Dashboard\Yarp.DynamicRouting.Dashboard.csproj", "{3870C69D-0EE5-4A2C-B754-218CCC5CCC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yarp.DynamicRouting.Tests", "src\Yarp.DynamicRouting.Tests\Yarp.DynamicRouting.Tests.csproj", "{1288C61D-0AD3-4BA1-A467-B5C7E483DC58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC652515-F461-4CB8-8397-7974910BC219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC652515-F461-4CB8-8397-7974910BC219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC652515-F461-4CB8-8397-7974910BC219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC652515-F461-4CB8-8397-7974910BC219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C502FA5-E556-4ABA-989E-D391AFD85ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C502FA5-E556-4ABA-989E-D391AFD85ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C502FA5-E556-4ABA-989E-D391AFD85ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C502FA5-E556-4ABA-989E-D391AFD85ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02179FE7-B17D-499D-8CCC-0A8530530D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02179FE7-B17D-499D-8CCC-0A8530530D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02179FE7-B17D-499D-8CCC-0A8530530D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02179FE7-B17D-499D-8CCC-0A8530530D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3870C69D-0EE5-4A2C-B754-218CCC5CCC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3870C69D-0EE5-4A2C-B754-218CCC5CCC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3870C69D-0EE5-4A2C-B754-218CCC5CCC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3870C69D-0EE5-4A2C-B754-218CCC5CCC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1288C61D-0AD3-4BA1-A467-B5C7E483DC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1288C61D-0AD3-4BA1-A467-B5C7E483DC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1288C61D-0AD3-4BA1-A467-B5C7E483DC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1288C61D-0AD3-4BA1-A467-B5C7E483DC58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D948BC2-A6EB-4518-A5CA-72B64736BFA7}
+	EndGlobalSection
+EndGlobal
