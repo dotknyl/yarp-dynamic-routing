@@ -1,4 +1,4 @@
-﻿namespace Yarp.DynamicRouting.SharedKernel.Helpers;
+﻿namespace Yarp.DynamicRouting.Core.Common.Helpers;
 public static class EnumHelper
 {
     public static string GetEnumDisplayName<TEnum>(TEnum enumValue)

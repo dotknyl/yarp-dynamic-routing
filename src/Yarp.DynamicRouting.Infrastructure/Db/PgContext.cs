@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Yarp.DynamicRouting.Core.Entities;
 using Yarp.DynamicRouting.Core.Interfaces.Db;
 using Yarp.DynamicRouting.Infrastructure.Db.Configuration;
@@ -26,4 +27,6 @@ public class PgContext : DbContext, IPgContext
         builder.ApplyConfiguration(new ProxyRouteConfiguration());
         base.OnModelCreating(builder);
     }
+
+    DatabaseFacade IPgContext.Database => Database;
 }
