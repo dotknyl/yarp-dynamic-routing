@@ -5,8 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
-
-	<ItemGroup>
+  <ItemGroup>
 	  <Compile Remove="Interfaces\Services\**" />
 	  <EmbeddedResource Remove="Interfaces\Services\**" />
 	  <None Remove="Interfaces\Services\**" />
@@ -16,6 +15,6 @@
 		<PackageReference Include="Yarp.ReverseProxy" Version="2.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\" />
 	</ItemGroup>
 </Project>

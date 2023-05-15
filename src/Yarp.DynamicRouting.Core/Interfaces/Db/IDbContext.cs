@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Yarp.DynamicRouting.Core.Entities;
 
 namespace Yarp.DynamicRouting.Core.Interfaces.Db;
@@ -12,6 +11,4 @@ public interface IPgContext
 
     string GetConnectionString();
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
-
-    DatabaseFacade Database { get; }
 }
