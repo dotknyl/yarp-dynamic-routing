@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using Yarp.DynamicRouting.Core.Common.Models;
 
 namespace Yarp.DynamicRouting.Core.Entities;
 public class Cluster
