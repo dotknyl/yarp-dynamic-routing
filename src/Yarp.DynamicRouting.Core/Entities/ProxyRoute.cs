@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Yarp.DynamicRouting.Core.Common.Models;
 using Yarp.DynamicRouting.Core.Enums;
 
 namespace Yarp.DynamicRouting.Core.Entities;

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Newtonsoft.Json;
+using Yarp.DynamicRouting.Core.Common.Models;
 using Yarp.DynamicRouting.Core.Entities;
 
 namespace Yarp.DynamicRouting.Infrastructure.Db.Configuration;

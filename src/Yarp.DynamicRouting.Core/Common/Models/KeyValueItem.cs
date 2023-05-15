@@ -1,4 +1,4 @@
-﻿namespace Yarp.DynamicRouting.Core.Entities;
+﻿namespace Yarp.DynamicRouting.Core.Common.Models;
 public class KeyValueItem
 {
     public string? Key { get; set; }
