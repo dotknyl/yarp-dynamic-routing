@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Yarp.DynamicRouting.Core.Common.Models;
 using Yarp.DynamicRouting.Core.Enums;
 
@@ -19,6 +21,7 @@ public class ProxyRoute
     /// <summary>
     /// Parameters used to match requests.
     /// </summary>
+    [Column(TypeName = "jsonb")]
     public required ProxyMatch Match { get; set; }
 
     /// <summary>
@@ -53,11 +56,13 @@ public class ProxyRoute
     /// <summary>
     /// Arbitrary key-value pairs that further describe this route.
     /// </summary>
+    [Column(TypeName = "jsonb")]
     public List<KeyValueItem>? Metadata { get; set; }
 
     /// <summary>
     /// Parameters used to transform the request and response. See <see cref="Service.ITransformBuilder"/>.
     /// </summary>
+    [Column(TypeName = "jsonb")]
     public List<Transform>? Transforms { get; set; }
 
 }

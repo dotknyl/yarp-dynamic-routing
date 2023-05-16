@@ -14,7 +14,7 @@ public class ProxyRouteConfiguration : IEntityTypeConfiguration<ProxyRoute>
         builder.Property(e => e.Match)
                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
-                   v => JsonConvert.DeserializeObject<ProxyMatch>(v));
+                   v => JsonConvert.DeserializeObject<ProxyMatch>(v) ?? new ProxyMatch());
         builder.Property(e => e.Metadata)
                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),

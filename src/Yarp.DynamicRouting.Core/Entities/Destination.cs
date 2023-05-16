@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Yarp.DynamicRouting.Core.Common.Models;
 
 namespace Yarp.DynamicRouting.Core.Entities
@@ -26,6 +27,7 @@ namespace Yarp.DynamicRouting.Core.Entities
         /// <summary>
         /// Arbitrary key-value pairs that further describe this destination.
         /// </summary>
+        [Column(TypeName = "jsonb")]
         public List<KeyValueItem>? Metadata { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Yarp.DynamicRouting.Core.Entities;
 public class CertificateConfig
@@ -24,6 +26,6 @@ public class CertificateConfig
     internal bool IsStoreCert => !string.IsNullOrEmpty(Subject);
 
     public int ProxyHttpClientOptionsId { get; set; }
-
+    [Column(TypeName = "jsonb")]
     public HttpClientConfig? ProxyHttpClientOptions { get; set; }
 }
