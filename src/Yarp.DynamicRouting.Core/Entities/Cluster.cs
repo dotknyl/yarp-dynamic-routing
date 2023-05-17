@@ -12,8 +12,8 @@ public class Cluster
     [Key]
     public int Id { get; set; }
     public Guid UniqueId { get; set; }
-    public required string Name { get; set; }
-    public required string Status { get; set; }
+    public string Name { get; set; }
+    public string Status { get; set; }
     /// <summary>
     /// Load balancing policy.
     /// </summary>

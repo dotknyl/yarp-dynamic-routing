@@ -22,7 +22,7 @@ public class ProxyRoute
     /// Parameters used to match requests.
     /// </summary>
     [Column(TypeName = "jsonb")]
-    public required ProxyMatch Match { get; set; }
+    public ProxyMatch Match { get; set; }
 
     /// <summary>
     /// Optionally, an order value for this route. Routes with lower numbers take precedence over higher numbers.
@@ -33,7 +33,7 @@ public class ProxyRoute
     /// Gets or sets the cluster that requests matching this route
     /// should be proxied to.
     /// </summary>
-    public string? ClusterId { get; set; }
+    public int ClusterId { get; set; }
     public DateTime? CreatedDate { get; set; }
     public DateTime? UpdatedDate { get; set; }
 
