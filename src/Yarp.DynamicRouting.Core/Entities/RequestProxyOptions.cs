@@ -7,8 +7,6 @@ public class ForwarderRequest
     /// An empty instance of this type.
     /// </summary>
     public static ForwarderRequest Empty { get; } = new();
-    [Key]
-    public int Id { get; set; }
 
     /// <summary>
     /// How long a request is allowed to remain idle between any operation completing, after which it will be canceled.
@@ -38,7 +36,6 @@ public class ForwarderRequest
     /// </summary>
     public bool? AllowResponseBuffering { get; init; }
     public string? ClusterId { get; set; }
-    public virtual Cluster? Cluster { get; set; }
 
     public bool Equals(ForwarderRequest? other)
     {

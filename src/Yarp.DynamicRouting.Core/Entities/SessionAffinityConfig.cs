@@ -37,7 +37,6 @@ public class SessionAffinityConfig
     /// </summary>
     public SessionAffinityCookie? Cookie { get; init; }
 
-    public string? ClusterId { get; set; }
     public DateTime? CreatedDate { get; set; }
     public DateTime? UpdatedDate { get; set; }
 

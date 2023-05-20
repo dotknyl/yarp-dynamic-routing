@@ -62,5 +62,4 @@ public class PassiveHealthCheckOptions
     /// Destination reactivation period after which an unhealthy destination is considered healthy again.
     /// </summary>
     public string? ReactivationPeriod { get; set; }
-    public int HealthCheckOptionsId { get; set; }
 }

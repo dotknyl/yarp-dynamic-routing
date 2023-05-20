@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Yarp.DynamicRouting.Core.Interfaces.Db;
 using Yarp.DynamicRouting.Infrastructure.Db;
 
@@ -14,6 +16,13 @@ public static class DynamicRoutingInfrastructureExts
             .MigrationsAssembly(assemblyName)
             .MigrationsHistoryTable("public", "public")
         ).UseSnakeCaseNamingConvention());
+
+        JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+        {
+            Formatting = Formatting.Indented,
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+
 
         services.AddScoped<IPgContext>(provider => provider.GetService<IPgContext>());
 
