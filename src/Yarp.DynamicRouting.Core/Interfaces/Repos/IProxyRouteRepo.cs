@@ -7,8 +7,8 @@ namespace Yarp.DynamicRouting.Core.Interfaces.Repos
     {
         Task<IEnumerable<ProxyRoute>> GetAllProxyRoutes(int clusterId);
         Task<ProxyRoute> GetProxyRoute(int clusterId, int proxyRouteId);
-        Task<bool> AddProxyRoute(int clusterId, AddProxyRouteCommand command);
-        Task<bool> UpdateProxyRoute(int clusterId, UpdateProxyRouteCommand command);
+        Task<bool> AddProxyRoute(int clusterId, UpsertProxyRouteCommand command);
+        Task<bool> UpdateProxyRoute(int clusterId, UpsertProxyRouteCommand command);
         Task<bool> DeleteProxyRoute(int clusterId, int proxyRouteId);
     }
 }

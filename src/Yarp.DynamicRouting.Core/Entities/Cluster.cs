@@ -10,7 +10,7 @@ public class Cluster
     /// The Id for this cluster. This needs to be globally unique.
     /// </summary>
     [Key]
-    public int Id { get; set; }
+    public int ClusterId { get; set; }
     public Guid UniqueId { get; set; }
     public string Name { get; set; }
     public string Status { get; set; }

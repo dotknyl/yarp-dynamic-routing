@@ -8,8 +8,8 @@ namespace Yarp.DynamicRouting.Core.Interfaces.Repos
     {
         Task<IEnumerable<Cluster>> GetClusters(FindClustersQuery query);
         Task<Cluster> GetCluster(int clusterId);
-        Task<bool> AddCluster(AddClusterCommand command);
-        Task<bool> UpdateCluster(int clusterId, UpdateClusterCommand command);
+        Task<bool> AddCluster(UpsertClusterCommand command);
+        Task<bool> UpdateCluster(int clusterId, UpsertClusterCommand command);
         Task<bool> DeleteCluster(int clusterId);
     }
 }

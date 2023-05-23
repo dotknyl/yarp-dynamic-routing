@@ -12,7 +12,7 @@ namespace Yarp.DynamicRouting.Core.Entities;
 public class ProxyRoute
 {
     [Key]
-    public int Id { get; set; }
+    public int ProxyRouteId { get; set; }
     /// <summary>
     /// Globally unique identifier of the route.
     /// </summary>

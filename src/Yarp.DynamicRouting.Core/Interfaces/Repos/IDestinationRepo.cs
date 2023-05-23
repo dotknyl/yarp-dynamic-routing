@@ -6,9 +6,9 @@ namespace Yarp.DynamicRouting.Core.Interfaces.Repos
     public interface IDestinationRepo
     {
         Task<IEnumerable<Destination>> GetAllDestinations(int clusterId);
-        Task<Destination> GetDestination(int clusterId, int destinationId);
-        Task<bool> AddDestination(AddDestinationCommand command);
-        Task<bool> UpdateDestination(int destinationId, UpdateDestinationCommand command);
+        Task<Destination?> GetDestination(int clusterId, int destinationId);
+        Task<bool> AddDestination(int clusterId, UpsertDestinationCommand command);
+        Task<bool> UpdateDestination(int clusterId, int destinationId, UpsertDestinationCommand command);
         Task<bool> DeleteDestination(int clusterId, int destinationId);
     }
 }

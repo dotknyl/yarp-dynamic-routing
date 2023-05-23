@@ -10,7 +10,7 @@ public class DestinationConfiguration : IEntityTypeConfiguration<Destination>
 {
     public void Configure(EntityTypeBuilder<Destination> builder)
     {
-        builder.ToTable(PgTables.Destination).HasKey(e => e.Id);
+        builder.ToTable(PgTables.Destination).HasKey(e => e.DestinationId);
         builder.Property(e => e.Metadata)
                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),

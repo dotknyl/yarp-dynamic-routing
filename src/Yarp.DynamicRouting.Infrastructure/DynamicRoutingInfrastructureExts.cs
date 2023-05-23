@@ -24,7 +24,7 @@ public static class DynamicRoutingInfrastructureExts
         };
 
 
-        services.AddScoped<IPgContext>(provider => provider.GetService<IPgContext>());
+        services.AddScoped<IPgContext>(provider => provider.GetService<PgContext>() ?? throw new NullReferenceException());
 
         return services;
     }

@@ -10,7 +10,7 @@ public class ProxyRouteConfiguration : IEntityTypeConfiguration<ProxyRoute>
 {
     public void Configure(EntityTypeBuilder<ProxyRoute> builder)
     {
-        builder.ToTable(PgTables.ProxyRoute).HasKey(e => e.Id);
+        builder.ToTable(PgTables.ProxyRoute).HasKey(e => e.ProxyRouteId);
         builder.Property(e => e.Match)
                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),

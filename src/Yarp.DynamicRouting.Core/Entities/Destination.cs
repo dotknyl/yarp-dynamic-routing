@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Yarp.DynamicRouting.Core.Commands;
 using Yarp.DynamicRouting.Core.Common.Models;
 
 namespace Yarp.DynamicRouting.Core.Entities;
@@ -10,7 +11,7 @@ namespace Yarp.DynamicRouting.Core.Entities;
 public class Destination
 {
     [Key]
-    public int Id { get; set; }
+    public int DestinationId { get; set; }
     /// <summary>
     /// Address of this destination. E.g. <c>https://127.0.0.1:123/abcd1234/</c>.
     /// </summary>

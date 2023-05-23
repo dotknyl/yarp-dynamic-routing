@@ -14,7 +14,7 @@ CREATE TABLE cluster (
 );
 
 CREATE TABLE destination (
-    id SERIAL PRIMARY KEY,
+    destination_id SERIAL PRIMARY KEY,
     address character varying(250) NOT NULL,
     health character varying(250),
     cluster_id integer NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE destination (
 );
 
 CREATE TABLE proxy_route (
-    id SERIAL PRIMARY KEY,
+    proxy_route_id SERIAL PRIMARY KEY,
     route_id VARCHAR(250),
     match JSONB NOT NULL,
     "order" INTEGER,

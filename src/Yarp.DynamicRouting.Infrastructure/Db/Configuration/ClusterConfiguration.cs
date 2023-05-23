@@ -10,7 +10,7 @@ public class ClusterConfiguration : IEntityTypeConfiguration<Cluster>
 {
     public void Configure(EntityTypeBuilder<Cluster> builder)
     {
-        builder.ToTable(PgTables.Cluster).HasKey(e => e.Id);
+        builder.ToTable(PgTables.Cluster).HasKey(e => e.ClusterId);
         builder.Property(e => e.SessionAffinity)
                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
