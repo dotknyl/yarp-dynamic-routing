@@ -55,7 +55,7 @@ public class ProxyRouteRepo : IProxyRouteRepo
         var proxyRoute = await _pgContext.ProxyRoutes
             .FirstOrDefaultAsync(r => r.ClusterId == clusterId && r.ProxyRouteId == proxyRouteId);
 
-        if (proxyRoute == null)
+        if (proxyRoute is not { })
             return false;
         proxyRoute.RouteId = Guid.NewGuid().ToString();
         proxyRoute.Match = command.Match;
@@ -64,10 +64,6 @@ public class ProxyRouteRepo : IProxyRouteRepo
         proxyRoute.CorsPolicy = command.CorsPolicy;
         proxyRoute.Metadata = command.Metadata?.ToKeyValueItems().ToList();
         proxyRoute.Transforms = command.Transforms;
-
-        // Update other properties
-
-        // Update UpdatedDate
         proxyRoute.UpdatedDate = DateTime.UtcNow;
 
         var rowsAffected = await _pgContext.SaveChangesAsync();
@@ -79,7 +75,7 @@ public class ProxyRouteRepo : IProxyRouteRepo
         var proxyRoute = await _pgContext.ProxyRoutes
             .FirstOrDefaultAsync(r => r.ClusterId == clusterId && r.ProxyRouteId == proxyRouteId);
 
-        if (proxyRoute == null)
+        if (proxyRoute is not { })
             return false;
 
         _pgContext.ProxyRoutes.Remove(proxyRoute);

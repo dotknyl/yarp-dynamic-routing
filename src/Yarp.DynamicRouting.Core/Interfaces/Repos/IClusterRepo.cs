@@ -2,14 +2,13 @@
 using Yarp.DynamicRouting.Core.Entities;
 using Yarp.DynamicRouting.Core.Queries;
 
-namespace Yarp.DynamicRouting.Core.Interfaces.Repos
+namespace Yarp.DynamicRouting.Core.Interfaces.Repos;
+
+public interface IClusterRepo
 {
-    public interface IClusterRepo
-    {
-        Task<IEnumerable<Cluster>> GetClusters(FindClustersQuery query, int pageIndex, int PageSize);
-        Task<Cluster> GetCluster(int clusterId);
-        Task<bool> AddCluster(UpsertClusterCommand command);
-        Task<bool> UpdateCluster(int clusterId, UpsertClusterCommand command);
-        Task<bool> DeleteCluster(int clusterId);
-    }
+    Task<IEnumerable<Cluster>> GetClusters(FindClustersQuery query, int pageIndex, int PageSize);
+    Task<Cluster?> GetCluster(int clusterId);
+    Task<bool> AddCluster(UpsertClusterCommand command);
+    Task<bool> UpdateCluster(int clusterId, UpsertClusterCommand command);
+    Task<bool> DeleteCluster(int clusterId);
 }

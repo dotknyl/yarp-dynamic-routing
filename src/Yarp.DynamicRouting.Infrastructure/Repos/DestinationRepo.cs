@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.Metrics;
 using Yarp.DynamicRouting.Core.Commands;
 using Yarp.DynamicRouting.Core.Common.Models;
 using Yarp.DynamicRouting.Core.Entities;
@@ -47,7 +46,7 @@ public class DestinationRepo : IDestinationRepo
     {
         var destination = await _pgContext.Destinations.FirstOrDefaultAsync(x => x.ClusterId == clusterId && x.DestinationId == destinationId);
 
-        if (destination == null)
+        if (destination is not { })
             return false;
 
         destination.Address = command.Address;
@@ -63,7 +62,7 @@ public class DestinationRepo : IDestinationRepo
     {
         var destination = await _pgContext.Destinations.FirstOrDefaultAsync(d => d.ClusterId == clusterId && d.DestinationId == destinationId);
 
-        if (destination == null)
+        if (destination is not { })
             return false;
 
         _pgContext.Destinations.Remove(destination);
@@ -77,7 +76,7 @@ public class DestinationRepo : IDestinationRepo
 
         _pgContext.Destinations.RemoveRange(destinations);
         var rowsAffected = await _pgContext.SaveChangesAsync();
-        return rowsAffected > 0;    
+        return rowsAffected > 0;
     }
 }
 
