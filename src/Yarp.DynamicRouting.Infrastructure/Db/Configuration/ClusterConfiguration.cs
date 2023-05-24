@@ -12,23 +12,28 @@ public class ClusterConfiguration : IEntityTypeConfiguration<Cluster>
     {
         builder.ToTable(PgTables.Cluster).HasKey(e => e.ClusterId);
         builder.Property(e => e.SessionAffinity)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<SessionAffinityConfig>(v));
         builder.Property(e => e.HealthCheck)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<HealthCheckOptions>(v));
         builder.Property(e => e.HttpClient)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<HttpClientConfig>(v));
         builder.Property(e => e.HttpRequest)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<ForwarderRequest>(v));
         builder.Property(e => e.Metadata)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<List<KeyValueItem>>(v));
 

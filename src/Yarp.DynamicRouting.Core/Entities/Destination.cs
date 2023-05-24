@@ -28,6 +28,5 @@ public class Destination
     /// <summary>
     /// Arbitrary key-value pairs that further describe this destination.
     /// </summary>
-    [Column(TypeName = "jsonb")]
     public List<KeyValueItem>? Metadata { get; set; }
 }

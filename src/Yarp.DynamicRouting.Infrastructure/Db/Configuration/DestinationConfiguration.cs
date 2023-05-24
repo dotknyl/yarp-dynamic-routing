@@ -12,7 +12,8 @@ public class DestinationConfiguration : IEntityTypeConfiguration<Destination>
     {
         builder.ToTable(PgTables.Destination).HasKey(e => e.DestinationId);
         builder.Property(e => e.Metadata)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<List<KeyValueItem>>(v));
 

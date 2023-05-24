@@ -10,5 +10,6 @@ namespace Yarp.DynamicRouting.Core.Interfaces.Repos
         Task<bool> AddDestination(int clusterId, UpsertDestinationCommand command);
         Task<bool> UpdateDestination(int clusterId, int destinationId, UpsertDestinationCommand command);
         Task<bool> DeleteDestination(int clusterId, int destinationId);
+        Task<bool> DeleteDestinations(int clusterId);
     }
 }

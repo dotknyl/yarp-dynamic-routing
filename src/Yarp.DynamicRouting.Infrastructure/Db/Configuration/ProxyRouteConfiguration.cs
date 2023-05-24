@@ -12,15 +12,18 @@ public class ProxyRouteConfiguration : IEntityTypeConfiguration<ProxyRoute>
     {
         builder.ToTable(PgTables.ProxyRoute).HasKey(e => e.ProxyRouteId);
         builder.Property(e => e.Match)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<ProxyMatch>(v) ?? new ProxyMatch());
         builder.Property(e => e.Metadata)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<List<KeyValueItem>>(v));
         builder.Property(e => e.Transforms)
-               .HasConversion(
+                .HasColumnType("jsonb")
+                .HasConversion(
                    v => JsonConvert.SerializeObject(v, Formatting.Indented),
                    v => JsonConvert.DeserializeObject<List<Transform>>(v));
 

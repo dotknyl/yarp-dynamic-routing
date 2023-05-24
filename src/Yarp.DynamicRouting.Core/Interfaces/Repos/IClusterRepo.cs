@@ -6,7 +6,7 @@ namespace Yarp.DynamicRouting.Core.Interfaces.Repos
 {
     public interface IClusterRepo
     {
-        Task<IEnumerable<Cluster>> GetClusters(FindClustersQuery query);
+        Task<IEnumerable<Cluster>> GetClusters(FindClustersQuery query, int pageIndex, int PageSize);
         Task<Cluster> GetCluster(int clusterId);
         Task<bool> AddCluster(UpsertClusterCommand command);
         Task<bool> UpdateCluster(int clusterId, UpsertClusterCommand command);
